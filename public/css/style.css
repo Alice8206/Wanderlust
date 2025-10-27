@@ -51,6 +51,7 @@ body{
 .listing-card{
     border:none !important;
     margin-bottom:2rem;
+    padding:1rem;
 }
 .card-img-top{
     border-radius:1rem !important;
@@ -88,7 +89,106 @@ body{
 .btns{
     display:flex;
 }
-#map {
-     height: 200px;
-     width:70vp;
-     }
+
+
+/* For most Android phones (portrait mode, width ≤ 480px) */
+@media (max-width: 480px) {
+
+  /* General layout */
+  body {
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar {
+    height: 4rem;
+    flex-wrap: wrap;
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar .nav-link {
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+  }
+
+  /* Search bar and buttons */
+  .search-bar,
+  .btn {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  /* Container padding */
+  .container {
+    padding: 0 1rem;
+    max-width: 100%;
+  }
+
+  /* Listing cards */
+  .listing-card {
+    margin-bottom: 1rem;
+  }
+
+  .card-img-top {
+    height: 200px !important;
+    border-radius: 0.6rem !important;
+  }
+
+  .card-body {
+    text-align: center;
+    padding: 0.5rem !important;
+  }
+
+  .card-text p {
+    font-size: 0.9rem;
+  }
+
+  /* Footer */
+  .f-info {
+    flex-direction: column;
+    height: auto;
+    gap: 0.6rem;
+    padding: 1rem 0.5rem;
+    text-align: center;
+  }
+
+  .f-info-socials i {
+    margin: 0 0.5rem;
+  }
+
+  /* Buttons layout */
+  .btns {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+ 
+
+  /* Images in show page */
+  .show-img {
+    height: 25vh;
+  }
+
+  /* Optional: adjust heading sizes */
+  h1, h2, h3 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
+
+/* For small tablets and large phones (width ≤ 768px) */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.2rem;
+  }
+
+  .listing-card {
+    margin-bottom: 1.5rem;
+  }
+
+  .f-info {
+    flex-direction: column;
+    text-align: center;
+  }
+}
